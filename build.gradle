@@ -38,6 +38,10 @@ dependencies {
     minecraft 'net.minecraftforge:forge:1.20.1-47.2.0'
 }
 
+tasks.named('processResources', ProcessResources) {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
 jar {
     manifest {
         attributes([
