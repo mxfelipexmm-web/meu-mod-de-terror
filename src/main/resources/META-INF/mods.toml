@@ -1,0 +1,12 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="nanohorror"
+version="1.0.0"
+displayName="Nano Horror Mod"
+authors="Nano Banana"
+description='''
+Um mod de terror impressionante com o Olho Amaldicoado e o Vulto Ancestral.
+'''
