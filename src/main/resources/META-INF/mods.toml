@@ -7,6 +7,18 @@ modId="nanohorror"
 version="1.0.0"
 displayName="Nano Horror Mod"
 authors="Nano Banana"
-description='''
-Um mod de terror impressionante com o Olho Amaldicoado e o Vulto Ancestral.
-'''
+description="Um mod de terror impressionante com o Olho Amaldicoado e o Vulto Ancestral."
+
+[[dependencies.nanohorror]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.nanohorror]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="BOTH"
