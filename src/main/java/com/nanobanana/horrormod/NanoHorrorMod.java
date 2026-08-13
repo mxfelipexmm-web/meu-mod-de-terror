@@ -71,7 +71,7 @@ public class NanoHorrorMod {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == TAB_HORROR.getKey()) {
+        if (event.getTabKey().equals(TAB_HORROR.getKey())) {
             event.accept(OLHO_AMALDICOADO);
         }
     }
@@ -141,7 +141,7 @@ public class NanoHorrorMod {
             boolean success = super.doHurtTarget(target);
             if (success && target instanceof LivingEntity livingTarget) {
                 livingTarget.addEffect(new MobEffectInstance(MobEffects.DARKNESS, 100, 0));
-                livingTarget.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, 60, 1));
+                livingTarget.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 60, 1));
                 
                 this.level().playSound(null, this.getX(), this.getY(), this.getZ(),
                         SoundEvents.WITHER_SPAWN, SoundSource.HOSTILE, 0.8F, 0.2F);
