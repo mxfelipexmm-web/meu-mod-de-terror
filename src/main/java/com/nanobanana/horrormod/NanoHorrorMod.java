@@ -9,7 +9,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollingGoal;
+import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
@@ -71,7 +71,7 @@ public class NanoHorrorMod {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey().equals(TAB_HORROR.getKey())) {
+        if (event.getTabKey() == TAB_HORROR.getKey()) {
             event.accept(OLHO_AMALDICOADO);
         }
     }
@@ -132,7 +132,7 @@ public class NanoHorrorMod {
         @Override
         protected void registerGoals() {
             this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2D, false));
-            this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollingGoal(this, 0.8D));
+            this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this, 0.8D));
             this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
         }
 
